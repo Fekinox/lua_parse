@@ -1,3 +1,0 @@
-"C:\Program Files\CMake\bin\cmake.exe" -E remove -f CMakeFiles\luaparse.dir/objects.a
-C:\MinGW\bin\ar.exe cr CMakeFiles\luaparse.dir/objects.a @CMakeFiles\luaparse.dir\objects1.rsp
-C:\MinGW\bin\g++.exe  -g   -Wl,--whole-archive CMakeFiles\luaparse.dir/objects.a -Wl,--no-whole-archive  -o luaparse.exe -Wl,--out-implib,libluaparse.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\luaparse.dir\linklibs.rsp

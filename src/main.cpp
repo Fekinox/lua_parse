@@ -33,7 +33,7 @@ struct scripts {
 	//Loads a script and returns its index
 	uint8_t load_script(const std::string& filename) {
 		// Fail if script limit reached
-		if(scrc == max_scripts) { printf("Script limit reached\n"); return; }
+		if(scrc == max_scripts) { printf("Script limit reached\n"); return UINT8_MAX; }
 		// Initialize the new Lua state
 		auto s = luaL_newstate();
 		// Open Lua standard libraries
@@ -41,7 +41,7 @@ struct scripts {
 		// Attempt to load and execute the file
 		if(luaL_dofile(s, filename.c_str())) {
 			printf("Failed to load %s\n", filename.c_str());
-			return;
+			return UINT8_MAX;
 		}
 
 		// Register functions
